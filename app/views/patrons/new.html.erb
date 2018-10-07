@@ -1,0 +1,29 @@
+<h1> New Patron Order </h1>
+
+<%= form_with scope: :patron, url: patrons_path, local: true do |form| %>
+  <p>
+    <%= form.label :firstname %><br>
+    <%= form.text_field :firstname %>
+  </p>
+  <p>
+    <%= form.label :lastname %><br>
+    <%= form.text_field :lastname %>
+  </p>
+  <p>
+    <%= form.label :email %><br>
+    <%= form.email_field :email %>
+  </p>
+  <p>
+    <%= form.label :address %><br>
+    <%= form.text_area :address %>
+  </p>
+
+  <p>
+    <%= form.label :loaves %><br>
+    <%= form.text_field :loaves %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

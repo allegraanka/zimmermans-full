@@ -1,0 +1,23 @@
+<h1>Patron List</h1>
+
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Address</th>
+    <th>Number of Roasts</th>
+    <th></th>
+  </tr>
+
+  <% @patrons.each do |patron| %>
+    <tr>
+      <td><%= patron.firstname %></td>
+      <td><%= patron.lastname %></td>
+      <td><%= patron.email %></td>
+      <td><%= patron.address %></td>
+      <td><%= patron.loaves %></td>
+      <td><%= link_to 'Show', patron_path(patron) %></td>
+    </tr>
+  <% end %>
+</table>
